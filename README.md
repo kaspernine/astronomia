@@ -71,5 +71,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Liens API
 
+https://www.le-systeme-solaire.net/
 https://api.le-systeme-solaire.net/
 https://api.le-systeme-solaire.net/swagger/#/
