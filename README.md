@@ -69,8 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
 ### Liens API
 
-https://rapidapi.com/psimavel/api/steam2/
-https://rapidapi.com/psimavel/api/epic-games-store/
+https://api.le-systeme-solaire.net/
+https://api.le-systeme-solaire.net/swagger/#/
