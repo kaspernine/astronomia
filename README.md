@@ -74,3 +74,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 https://www.le-systeme-solaire.net/
 https://api.le-systeme-solaire.net/
 https://api.le-systeme-solaire.net/swagger/#/
+
+https://react-bootstrap.github.io/components/navbar/
+https://create-react-app.dev/docs/adding-bootstrap/

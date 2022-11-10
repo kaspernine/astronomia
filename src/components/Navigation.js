@@ -1,17 +1,20 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 const Navigation = () => {
     return (
+
         <div className="navigation">
-            <ul>
-                <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-                    <li>Accueil</li>
-                </NavLink>
-                <NavLink to="/about" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-                    <li>A PROPOS</li>
-                </NavLink>
-            </ul>
+            <Navbar bg="primary" variant="dark">
+                <Container>
+                    <Navbar.Brand href="/">Astronomia</Navbar.Brand>
+                    <Nav className="me-auto">
+                        <Nav.Link href="/about" className={(nav) => (nav.active ? "active" : "")}>A propos</Nav.Link>
+                    </Nav>
+                </Container>
+            </Navbar>
         </div>
     );
 };

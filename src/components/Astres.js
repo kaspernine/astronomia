@@ -51,7 +51,7 @@ const Astres = () => {
             )}
             <ul>
                 {data
-                    .filter((astre) => astre.bodyType === selectedRadio)
+                    .filter((astre) => (astre.bodyType === selectedRadio || selectedRadio === ""))
                     .sort((a, b) => a.name - b.name)
                     .slice(0, rangeValue)
                     .map((astre, index) => (
