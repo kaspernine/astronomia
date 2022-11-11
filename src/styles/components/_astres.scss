@@ -1,7 +1,10 @@
 .astres {
   text-align: center;
+  background: url(../../assets/img/astre_bg.jpg) center/cover;
+  background-repeat: no-repeat;
 
   .radio-container {
+    opacity: 0.9;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 20px;
@@ -19,6 +22,20 @@
       margin-left: 10px;
       cursor: pointer;
     }
+  }
+
+  .table-content {
+    margin-bottom: 20px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-height: 450px;
+    overflow: auto;
+    display:inline-block;
+    border-radius: 4px;
+    transition: 0.3s;
+    background: $white;
   }
 
   input[type="text"] {
