@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import DataTable from "./DataTable";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 
 const Astres = () => {
   const [data, setData] = useState([]);
@@ -46,15 +48,30 @@ const Astres = () => {
           </li>
         ))}
       </ul>
-
-      <div className="table-content">
+      <Card>
         {selectedRadio && (
-          <button onClick={() => setSelectedRadio("")}>
-            Annuler la sélection
-          </button>
+          <Card.Header as="h5">
+            <div className="card-header-content">
+              <div className="header-text">
+                <p>{selectedRadio}</p>
+              </div>
+              <div className="radio-button">
+                <Button variant="primary" onClick={() => setSelectedRadio("")}>
+                  Annuler la sélection
+                </Button>
+              </div>
+            </div>
+          </Card.Header>
         )}
-        <DataTable />
-      </div>
+        <Card.Body>
+          <DataTable
+            rangeValue={rangeValue}
+            selectedRadio={selectedRadio}
+            data={data}
+            setData={setData}
+          />
+        </Card.Body>
+      </Card>
     </div>
   );
 };
