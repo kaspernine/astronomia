@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="footer">
-      <p>Copyrigts example</p>
+      <p>© 2022 Astronomia. All Rights Reserved.</p>
     </div>
   );
 };

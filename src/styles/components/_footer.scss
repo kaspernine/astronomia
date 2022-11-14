@@ -1,11 +1,10 @@
 .footer {
-    position: relative;
-    width: 100%;
-    background: $white;
+    position: absolute;
     justify-content: center;
     text-align: center;
-
-    p {
-        margin: auto;
-    }
+    bottom: 0;
+    left: 0; 
+    right: 0;
+    color: $white;
+    //background: $color-3;
 }
