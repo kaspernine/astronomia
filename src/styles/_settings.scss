@@ -22,23 +22,27 @@ $white: rgb(243, 243, 243);
 
 * {
   padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: $font-1;
   min-height: 100%;
   position: relative;
   // @include verticalCenter;
 
   .home {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba($color-3, 0.452)), url(../assets/img/astre_bg.jpg) center/cover;
-    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba($color-3, 0.452)), url(../assets/img/astre_bg.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+    
+    .footer {
+      color: $white;
+    }
   }
 
   .about {
-    color: black;
+    .footer {
+      display: none;
+    }
   }
 }
 
