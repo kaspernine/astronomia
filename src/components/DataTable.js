@@ -10,7 +10,7 @@ const DataTable = ({ rangeValue, selectedRadio, data }) => {
           <th>#</th>
           <th>Nom</th>
           <th>Dimension</th>
-          {selectedRadio === "Moon" && (
+          {(!selectedRadio || selectedRadio === "Moon") && (
             <th id="pl-space">Planète la plus proche</th>
           )}
           <th>Date de découverte</th>
