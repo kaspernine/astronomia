@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Table from "react-bootstrap/Table";
+// import Button from "react-bootstrap/Button";
+// import Modal from "react-bootstrap/Modal";
+import AstreDetail from "./AstreDetail";
 
 const DataTable = ({ rangeValue, selectedRadio, data }) => {
-  console.log(data);
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
+
+  const [selectedRow, setSelectedRow] = useState("");
+
   return (
     <Table striped className="data-table">
       <thead>
@@ -11,7 +18,7 @@ const DataTable = ({ rangeValue, selectedRadio, data }) => {
           <th>Nom</th>
           <th>Dimension</th>
           {(!selectedRadio || selectedRadio === "Moon") && (
-            <th id="pl-space">Planète la plus proche</th>
+            <th>Planète la plus proche</th>
           )}
           <th>Date de découverte</th>
           <th>Auteur de la découverte</th>
@@ -26,7 +33,13 @@ const DataTable = ({ rangeValue, selectedRadio, data }) => {
           .sort((a, b) => a.name - b.name)
           .slice(0, rangeValue)
           .map((item, index) => (
-            <tr key={index}>
+            <tr
+              key={index}
+              onClick={() => {
+                setSelectedRow(item.id);
+                handleShow();
+              }}
+            >
               <td>{index}</td>
               <td>{item.name}</td>
               <td>{item.dimension}</td>
@@ -40,6 +53,12 @@ const DataTable = ({ rangeValue, selectedRadio, data }) => {
             </tr>
           ))}
       </tbody>
+      <AstreDetail
+        show={show}
+        setShow={setShow}
+        data={data}
+        selectedRow={selectedRow}
+      />
     </Table>
   );
 };
