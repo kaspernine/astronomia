@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Table from "react-bootstrap/Table";
-// import Button from "react-bootstrap/Button";
-// import Modal from "react-bootstrap/Modal";
 import AstreDetail from "./AstreDetail";
 
 const DataTable = ({ rangeValue, selectedRadio, data }) => {
@@ -9,6 +7,18 @@ const DataTable = ({ rangeValue, selectedRadio, data }) => {
   const handleShow = () => setShow(true);
 
   const [selectedRow, setSelectedRow] = useState("");
+
+  console.log(data);
+
+  const showData = item => {
+    setSelectedRow(item.id);
+    handleShow();
+  }
+
+  // const showPlentDetails = item.aroundPlanet => {
+  //   setSelectedRow(item.aroundPlanet.planet);
+  //   handleShow();
+  // }
 
   return (
     <Table striped className="data-table">
@@ -26,7 +36,6 @@ const DataTable = ({ rangeValue, selectedRadio, data }) => {
       </thead>
       <tbody>
         {data
-          //.filter((item) => item.aroundPlanet !== null)
           .filter(
             (astre) => astre.bodyType === selectedRadio || selectedRadio === ""
           )
@@ -36,20 +45,19 @@ const DataTable = ({ rangeValue, selectedRadio, data }) => {
             <tr
               key={index}
               onClick={() => {
-                setSelectedRow(item.id);
-                handleShow();
+                showData(item)
               }}
             >
               <td>{index}</td>
-              <td>{item.name}</td>
-              <td>{item.dimension}</td>
-              {item.bodyType === "Moon" && (
-                <td>
+              <td>{item.name === '' ? 'inconnu' : item.name}</td>
+              <td>{item.dimension === '' ? 'inconnue' : item.dimension}</td>
+              {(!selectedRadio || item.bodyType === "Moon") && (
+                <td onClick={() => showData(item)}>
                   {item.aroundPlanet !== null ? item.aroundPlanet.planet : ""}
                 </td>
               )}
-              <td>{item.discoveryDate}</td>
-              <td>{item.discoveredBy}</td>
+              <td>{item.discoveryDate === '' ? 'inconnue' : item.discoveryDate}</td>
+              <td>{item.discoveredBy === '' ? 'inconnu' : item.discoveredBy}</td>
             </tr>
           ))}
       </tbody>
