@@ -31,7 +31,7 @@ const Astres = () => {
         <input
           type="range"
           min="1"
-          max="250"
+          max={data.length}
           defaultValue={rangeValue}
           onChange={(e) => setRangeValue(e.target.value)}
         />
