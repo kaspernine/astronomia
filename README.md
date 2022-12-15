@@ -77,3 +77,7 @@ https://api.le-systeme-solaire.net/swagger/#/
 
 https://react-bootstrap.github.io/components/navbar/
 https://create-react-app.dev/docs/adding-bootstrap/
+
+### Lien du cours
+
+https://docs.google.com/presentation/d/1MDKpy91nFg0pQcV-Sn3sCS_wVAhCCSaZOtG395sHxSw/edit#slide=id.g1237e88cbd3_0_13
