@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+html {
+  height: 100%;
+}
+
+$font-1: "font-1", sans-serif;
+
+$color-1: #61dafb;
+$color-2: salmon;
+$color-3: #282c34;
+$white: rgb(243, 243, 243);
+
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  padding: 0;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  // @include verticalCenter;
+
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba($color-3, 0.452)), url(../assets/img/astre_bg.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+
+  .footer {
+    color: $white;
+  }
+
+  .about {
+    .footer {
+      display: none;
+    }
+  }
+}
+
+li {
+  list-style-type: none;
+}
